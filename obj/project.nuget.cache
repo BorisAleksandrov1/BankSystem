@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "VJn2SpirRqR+agtFbyOMM6uYeifxyGFxUQkyXe2a7YYNhsettviQKPZEstGVQ7QhrRM74wG04VMnXXNdaLwPHA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Admin\\Projects\\BankSystem\\BankSystem.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
