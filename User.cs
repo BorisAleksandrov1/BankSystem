@@ -15,10 +15,22 @@ class User
             throw new ArgumentNullException(nameof(value), "Password cannot be null or empty.");
         }
     
-        if(!Regex.IsMatch(value, "^(?=.*[a-z]{8,})(?=.*\\d).+$"))
-        {
-            throw new ArgumentException("Password does not meet complexity requirements.");
-        }
+        if (value.Length < 8)
+            {
+                throw new ArgumentException("Password must be at least 8 characters long.");
+            }
+
+            // Check for at least one number using regex
+            if (!Regex.IsMatch(value, @"(\d)\w+"))
+            {
+                throw new ArgumentException("Password must contain at least one number.");
+            }
+
+            // Check for at least one uppercase letter using regex
+            if (!Regex.IsMatch(value, @"([A-Z])\w+"))
+            {
+                throw new ArgumentException("Password must contain at least one uppercase letter.");
+            }
         _password = value;
     
         }
@@ -27,8 +39,8 @@ class User
 
     public User(string name, string pass)
     {
-        this.UserName = name;
-        this.Password = pass;
+        UserName = name;
+        Password = pass;
 
 
     }
