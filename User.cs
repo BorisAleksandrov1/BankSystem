@@ -3,19 +3,13 @@ using System.Text.RegularExpressions;
 
 class User
 {
-    private string _password;   
+    private string _password;
     public string Password
-    { 
+    {
         get { return _password; }
         set
         {
-
-        if (string.IsNullOrEmpty(value))
-        {
-            throw new ArgumentNullException(nameof(value), "Password cannot be null or empty.");
-        }
-    
-        if (value.Length < 8)
+            if (value.Length < 8)
             {
                 throw new ArgumentException("Password must be at least 8 characters long.");
             }
@@ -31,17 +25,18 @@ class User
             {
                 throw new ArgumentException("Password must contain at least one uppercase letter.");
             }
-        _password = value;
-    
+            _password = value;
+
         }
     }
-    public string UserName { get; set; }
+    public string _email;
+    public string _userName;
+    public decimal _balance;
 
-    public User(string name, string pass)
+    public User(string name, string pass, string email)
     {
-        UserName = name;
+        _email = email;
+        _userName = name;
         Password = pass;
-
-
     }
 }

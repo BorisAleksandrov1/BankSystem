@@ -1,14 +1,22 @@
 {
   "273af9a6-88f7-4910-8389-c46cc3ad9a86": {
     "Password": "Parolata12",
-    "UserName": "BoriskataMBT"
+    "UserName": "BoriskataMBT",
+    "Email": "boriskatambt@gmail.com"
   },
   "2a1fa8f0-9b8e-4eb5-b395-ea05dc6ce961": {
     "Password": "Azhulkata24",
-    "UserName": "Yoankata"
+    "UserName": "Yoankata",
+    "Email": "yoankata@gmail.com"
   },
   "7030bb42-c24c-457d-b1a1-c1b0376e49e7": {
     "Password": "Password4214",
-    "UserName": "bobcho_Margaritkata"
+    "UserName": "bobcho_Margaritkata",
+    "Email": "bobcho_margaritkata@gmail.com"
+  },
+  "5d8d8b90-6b7c-439e-b821-8810c816fcfc": {
+    "Password": "Passtest12",
+    "UserName": "BojidarYordanov",
+    "Email": "bojidaryordanov@gmail.com"
   }
 }

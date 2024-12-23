@@ -7,4 +7,7 @@ public class UserDTO
 
     [JsonProperty("UserName")]
     public string UserName { get; set; }
+
+    [JsonProperty("Email")]
+    public string Email { get; set; }
 }
