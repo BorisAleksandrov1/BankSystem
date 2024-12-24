@@ -31,8 +31,9 @@ class User
     }
     public string _email;
     public string _userName;
-    public decimal _balance;
-
+    //public decimal _balance;
+    public Dictionary<string, bankAccount> _accounts = new Dictionary<string, bankAccount>();
+    public bankAccount _currentAccount;
     public User(string name, string pass, string email)
     {
         _email = email;

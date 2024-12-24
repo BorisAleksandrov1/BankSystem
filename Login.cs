@@ -7,7 +7,7 @@ class Login
 
             while (!ContainsUserName(email, bankLogic.usersDict))
             {
-                System.Console.WriteLine("User not found. Please enter a valid user name.");
+                System.Console.WriteLine("User not found. Please enter a valid email.");
                 email = Console.ReadLine();
             }
 
@@ -17,6 +17,7 @@ class Login
                 if(user.Value._email == email)
                 {
                     bankLogic.currentUser = user.Value;
+                    bankLogic.currentKey = user.Key;
                     break;
                 }
             }

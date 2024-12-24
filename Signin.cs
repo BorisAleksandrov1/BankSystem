@@ -21,8 +21,17 @@ class SignIn
     public static void CreateUser(string newName, string email, string password)
     {
         User newUser = new User(newName, password, email);
+
+        bankAccount newAccount = new bankAccount("Main");
+        string newAccountID = Guid.NewGuid().ToString();
+
+        newUser._accounts.Add(newAccountID, newAccount);
+        newUser._currentAccount = newAccount;
+
         bankLogic.currentUser = newUser;
+
         string newId = Guid.NewGuid().ToString();
+        bankLogic.currentKey = newId;
 
         bankLogic.usersDict.Add(newId, newUser);
     } 

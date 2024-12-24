@@ -1,22 +1,77 @@
 {
   "273af9a6-88f7-4910-8389-c46cc3ad9a86": {
-    "Password": "Parolata12",
-    "UserName": "BoriskataMBT",
-    "Email": "boriskatambt@gmail.com"
+    "_email": "boriskatambt@gmail.com",
+    "_userName": "BoriskataMBT",
+    "_accounts": {
+      "37d5fa08-8c82-4d94-9e7e-bb1cb8c9a50a": {
+        "_name": "Main",
+        "_balance": 0.0
+      }
+    },
+    "_currentAccount": {
+      "_name": "Main",
+      "_balance": 0.0
+    },
+    "Password": "Parolata12"
   },
   "2a1fa8f0-9b8e-4eb5-b395-ea05dc6ce961": {
-    "Password": "Azhulkata24",
-    "UserName": "Yoankata",
-    "Email": "yoankata@gmail.com"
+    "_email": "yoankata@gmail.com",
+    "_userName": "Yoankata",
+    "_accounts": {
+      "b5e1f3c4-3a4c-4b86-9f57-7736a9957e21": {
+        "_name": "Main",
+        "_balance": 0.0
+      }
+    },
+    "_currentAccount": {
+      "_name": "Main",
+      "_balance": 0.0
+    },
+    "Password": "Azhulkata24"
   },
   "7030bb42-c24c-457d-b1a1-c1b0376e49e7": {
-    "Password": "Password4214",
-    "UserName": "bobcho_Margaritkata",
-    "Email": "bobcho_margaritkata@gmail.com"
+    "_email": "bobcho_margaritkata@gmail.com",
+    "_userName": "bobcho_Margaritkata",
+    "_accounts": {
+      "5c70b093-88a6-47b4-987b-76b8bcb1e2e7": {
+        "_name": "Main",
+        "_balance": 0.0
+      }
+    },
+    "_currentAccount": {
+      "_name": "Main",
+      "_balance": 0.0
+    },
+    "Password": "Password4214"
   },
   "5d8d8b90-6b7c-439e-b821-8810c816fcfc": {
-    "Password": "Passtest12",
-    "UserName": "BojidarYordanov",
-    "Email": "bojidaryordanov@gmail.com"
+    "_email": "bojidaryordanov@gmail.com",
+    "_userName": "BojidarYordanov",
+    "_accounts": {
+      "fde08206-523d-4a9c-bc87-2b0f6e7d54c1": {
+        "_name": "Main",
+        "_balance": 0.0
+      }
+    },
+    "_currentAccount": {
+      "_name": "Main",
+      "_balance": 0.0
+    },
+    "Password": "Passtest12"
+  },
+  "2068c5ce-b146-43c5-b9a8-298890fa188b": {
+    "_email": "pasta@gmail.com",
+    "_userName": "Pastetko",
+    "_accounts": {
+      "002c5abe-0402-4ebc-b06e-aa90f1c463fd": {
+        "_name": "Main",
+        "_balance": 0.0
+      }
+    },
+    "_currentAccount": {
+      "_name": "Main",
+      "_balance": 0.0
+    },
+    "Password": "ParolataBace1234"
   }
 }

@@ -10,9 +10,11 @@ using Newtonsoft;
 class bankLogic
 {
     public static User currentUser;
+    public static string currentKey = string.Empty;
     public static Dictionary<string, User> usersDict = new Dictionary<string, User>();
 
-    static void Main()
+
+    public static void Start()
     {
         string path = @"C:\Users\Admin\Projects\BankSystem";
         string usersPath = Path.Combine(path, "Users.json");
@@ -28,6 +30,8 @@ class bankLogic
                 string key = kvp.Key;
                 UserDTO dto = kvp.Value;
                 usersDict[key] = new User(dto.UserName, dto.Password, dto.Email);
+                usersDict[key]._currentAccount = dto.currentAccount;
+                usersDict[key]._accounts = dto.Accounts;
             }
 
         //check if the user has logged in before
@@ -36,12 +40,13 @@ class bankLogic
         //perform banking operations
         ChoseOperation();
 
-        //Add logic to get the user key and make the position from the key = current user to update the dict
+        //key = current user to update the dict
+        usersDict[currentKey] = currentUser;
         
         //serialize the updated dictionary
             var serializedObject = Newtonsoft.Json.JsonConvert.SerializeObject(usersDict, Newtonsoft.Json.Formatting.Indented);
 
-            using (StreamWriter sw = new StreamWriter(path))
+            using (StreamWriter sw = new StreamWriter(usersPath))
             {
                 sw.Write(serializedObject);
             }
@@ -52,27 +57,31 @@ class bankLogic
         while (true)
         {
             System.Console.WriteLine("Welcome, " + currentUser._userName);
+            System.Console.WriteLine("You are in " + currentUser._currentAccount._name);
             System.Console.WriteLine("Choose an operation:");
-            System.Console.WriteLine("1. Check balance");
-            System.Console.WriteLine("2. Deposit money");
-            System.Console.WriteLine("3. Withdraw money");
-            System.Console.WriteLine("4. Transfer money");
-            System.Console.WriteLine("5. Exit");
+            System.Console.WriteLine("1. Change current bank account");
+            System.Console.WriteLine("2. Create new bank account");
+            System.Console.WriteLine("3. Check balance");
+            System.Console.WriteLine("4. Deposit money");
+            System.Console.WriteLine("5. Withdraw money");
+            System.Console.WriteLine("6. Transfer money");
+            System.Console.WriteLine("7. Exit");
 
             string cmd = Console.ReadLine();
 
             switch (cmd)
             {
                 case "1":
-                    Operation.PrintBalance();
+                    bankAccount.ChangeAccount();
                     break;
                 case "2":
-                    Operation.Deposit();
+                    bankAccount.CreateAccount();
                     break;
                 case "3":
-                    Operation.Withdraw();
+                    //Operation.Withdraw();
                     break;
                 case "4":
+                    
                     break;
                 case "5":
                     System.Console.WriteLine("Goodbye!");
